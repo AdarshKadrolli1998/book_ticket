@@ -1,4 +1,4 @@
-import 'package:book_ticket/common/sizedBox.dart';
+import 'file:///C:/Users/user1/AndroidStudioProjects/book_ticket/lib/components/sizedBox.dart';
 import 'package:book_ticket/common/strings.dart';
 import 'package:book_ticket/components/myButton.dart';
 import 'package:book_ticket/screens/start/carouselSliderDots.dart';
