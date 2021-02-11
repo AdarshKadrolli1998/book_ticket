@@ -1,5 +1,5 @@
 import 'package:book_ticket/common/myColors.dart';
-import 'package:book_ticket/common/strings.dart';
+import 'package:book_ticket/common/myStrings.dart';
 import 'package:flutter/material.dart';
 
 /// CarouselDots class defines the dots in startScreen
@@ -28,7 +28,7 @@ class CarouselSliderDots extends StatelessWidget {
           margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: current == index ? CustomColors.dotPinkColor : CustomColors.dotGreyColor,
+            color: current == index ? MyColors.dotPinkColor : MyColors.dotGreyColor,
           ),
         );
       }),

@@ -1,9 +1,9 @@
 import 'package:book_ticket/common/myColors.dart';
 import 'package:flutter/material.dart';
 
-/// MyButton class defines the raised button which is reused
-class MyButton extends StatelessWidget {
-  MyButton({@required this.onPressed, @required this.title});
+/// MyRaisedButton class defines the raised button which can be reused
+class MyRaisedButton extends StatelessWidget {
+  MyRaisedButton({@required this.onPressed, @required this.title});
 
   final GestureTapCallback onPressed;
   final String title;
@@ -11,14 +11,14 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
-      color: CustomColors.buttonColor,
+      color: MyColors.buttonColor,
       child: Container(
         width: MediaQuery.of(context).size.width * 0.55,
         padding: EdgeInsets.all(18.0),
         child: Text(
           title,
           style: TextStyle(
-            color: CustomColors.buttonTextColor,
+            color: MyColors.buttonTextColor,
             fontSize: 18
           ),
           textAlign: TextAlign.center,

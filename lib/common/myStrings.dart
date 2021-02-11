@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
 /// Strings class to define the required strings
-class Strings {
+class MyStrings {
   static const String splashNameNavana = "navana";
   static const String splashNameAir = " air";
   static const String startBookingButton = "START BOOKING";
+  static const String createAccount = "Create \nan account";
+  static const String signUP = "SIGN UP";
+  static const String haveAnAccount = "Already have an account?";
+  static const String signIn = "Sign In";
+  static const String skipNow = "Skip for Now";
 }
 
 /// List defines the images used in startscreen to make carousel slider

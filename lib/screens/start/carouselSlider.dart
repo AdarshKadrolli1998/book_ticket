@@ -1,4 +1,4 @@
-// import 'package:book_ticket/common/strings.dart';
+// import 'package:book_ticket/common/myStrings.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
 // import 'package:flutter/material.dart';
 //

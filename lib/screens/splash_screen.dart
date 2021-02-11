@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:book_ticket/common/myColors.dart';
-import 'package:book_ticket/common/strings.dart';
+import 'package:book_ticket/common/myStrings.dart';
 import 'package:book_ticket/screens/start/startScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: CustomColors.splashBGColor,
+        backgroundColor: MyColors.splashBGColor,
         body: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
@@ -33,8 +33,8 @@ class _SplashScreenState extends State<SplashScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(Strings.splashNameNavana, style: TextStyle(fontSize: 40, color: CustomColors.textNavanaColor, fontWeight: FontWeight.bold),),
-                  Text(Strings.splashNameAir, style: TextStyle(fontSize: 40, color: CustomColors.textAirColor, fontWeight: FontWeight.bold),)
+                  Text(MyStrings.splashNameNavana, style: TextStyle(fontSize: 40, color: MyColors.textNavanaColor, fontWeight: FontWeight.bold),),
+                  Text(MyStrings.splashNameAir, style: TextStyle(fontSize: 40, color: MyColors.textAirColor, fontWeight: FontWeight.bold),)
                 ],
               )
             ],

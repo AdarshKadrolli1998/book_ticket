@@ -1,6 +1,7 @@
 import 'file:///C:/Users/user1/AndroidStudioProjects/book_ticket/lib/components/sizedBox.dart';
-import 'package:book_ticket/common/strings.dart';
-import 'package:book_ticket/components/myButton.dart';
+import 'package:book_ticket/common/myStrings.dart';
+import 'file:///C:/Users/user1/AndroidStudioProjects/book_ticket/lib/components/myButtons/myRaisedButton.dart';
+import 'package:book_ticket/screens/sign_up/signUpScreen.dart';
 import 'package:book_ticket/screens/start/carouselSliderDots.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -75,9 +76,14 @@ class StartScreenState extends State<StartScreen> {
               SizeBetween(),
               CarouselSliderDots(current: cnt),
               SizeBetween(),
-              MyButton(
-                onPressed: (){},
-                title: Strings.startBookingButton,
+              MyRaisedButton(
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignUp(),),
+                  );
+                },
+                title: MyStrings.startBookingButton,
               ),
             ],
           ),
