@@ -3,9 +3,9 @@ import 'package:book_ticket/common/strings.dart';
 import 'package:flutter/material.dart';
 
 /// CarouselDots class defines the dots in startScreen
-class CarouselDots extends StatelessWidget {
+class CarouselSliderDots extends StatelessWidget {
   final int current;
-  CarouselDots({@required this.current});
+  CarouselSliderDots({@required this.current});
   List<T> map<T>(List list, Function handler) {
     List<T> result = [];
     try{

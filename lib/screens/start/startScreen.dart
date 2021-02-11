@@ -73,7 +73,7 @@ class StartScreenState extends State<StartScreen> {
             }).toList(),
           ),
               SizeBetween(),
-              CarouselDots(current: cnt),
+              CarouselSliderDots(current: cnt),
               SizeBetween(),
               MyButton(
                 onPressed: (){},
