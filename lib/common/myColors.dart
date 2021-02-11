@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// CustomColors class to declare required customized colors
 class CustomColors{
   static const pinkColor = Color.fromRGBO(255, 121, 168, 1);
   static const whiteColor = Color.fromRGBO(255, 255, 255, 0.9);

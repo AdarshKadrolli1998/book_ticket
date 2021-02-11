@@ -1,6 +1,7 @@
-import 'package:book_ticket/comman/myColors.dart';
+import 'package:book_ticket/common/myColors.dart';
 import 'package:flutter/material.dart';
 
+/// MyButton class defines the raised button which is reused
 class MyButton extends StatelessWidget {
   MyButton({@required this.onPressed, @required this.title});
 
