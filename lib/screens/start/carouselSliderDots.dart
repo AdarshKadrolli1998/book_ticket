@@ -28,7 +28,7 @@ class CarouselSliderDots extends StatelessWidget {
           margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: current == index ? CustomColors.pinkColor : CustomColors.greyColor,
+            color: current == index ? CustomColors.dotPinkColor : CustomColors.dotGreyColor,
           ),
         );
       }),

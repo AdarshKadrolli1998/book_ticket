@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: CustomColors.indigoColor,
+        backgroundColor: CustomColors.splashBGColor,
         body: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
@@ -33,8 +33,8 @@ class _SplashScreenState extends State<SplashScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(Strings.splashNameNavana, style: TextStyle(fontSize: 40, color: CustomColors.whiteColor, fontWeight: FontWeight.bold),),
-                  Text(Strings.splashNameAir, style: TextStyle(fontSize: 40, color: CustomColors.pinkColor, fontWeight: FontWeight.bold),)
+                  Text(Strings.splashNameNavana, style: TextStyle(fontSize: 40, color: CustomColors.textNavanaColor, fontWeight: FontWeight.bold),),
+                  Text(Strings.splashNameAir, style: TextStyle(fontSize: 40, color: CustomColors.textAirColor, fontWeight: FontWeight.bold),)
                 ],
               )
             ],

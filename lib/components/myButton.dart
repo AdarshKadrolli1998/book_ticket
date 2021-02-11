@@ -11,14 +11,14 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
-      color: CustomColors.pinkColor,
+      color: CustomColors.buttonColor,
       child: Container(
         width: MediaQuery.of(context).size.width * 0.55,
         padding: EdgeInsets.all(18.0),
         child: Text(
           title,
           style: TextStyle(
-            color: CustomColors.whiteColor,
+            color: CustomColors.buttonTextColor,
             fontSize: 18
           ),
           textAlign: TextAlign.center,
