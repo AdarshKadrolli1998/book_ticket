@@ -114,8 +114,6 @@ class _SignUpState extends State<SignUp> {
                           ),
                         FlatButton(
                           onPressed: () {  },
-                            child: Container(
-                              padding: const EdgeInsets.only(left: 0, right: 10),
                               child: Text(MyStrings.signIn,
                                 style: TextStyle(
                                     color: MyColors.textSignInColor,
@@ -123,7 +121,6 @@ class _SignUpState extends State<SignUp> {
                                     fontSize: 16
                                 ),
                               ),
-                            )
                         )
                       ],
                     ),
