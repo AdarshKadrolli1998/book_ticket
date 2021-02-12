@@ -28,7 +28,7 @@ class StartScreenState extends State<StartScreen> {
         return Carousel(400);
       }
     }
-    catch(e){
+    catch(Exception){
       print("Choose a proper screen");
     }
   }

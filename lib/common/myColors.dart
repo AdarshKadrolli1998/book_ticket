@@ -14,4 +14,8 @@ class MyColors{
   static const haveAccountColor = Color.fromRGBO(186, 186, 186, 1);
   static const skipNowColor = Color.fromRGBO(186, 186, 186, 1);
   static const mailIconColor = Color.fromRGBO(255, 121, 168, 1);
+  static const signInColor = Color.fromRGBO(26, 35, 126, 1);
+  static const dontHaveAccountColor = Color.fromRGBO(186, 186, 186, 1);
+  static const textSignUpColor = Color.fromRGBO(255, 121, 168, 1);
+  static const forgotPasswordColor = Color.fromRGBO(186, 186, 186, 1);
 }
