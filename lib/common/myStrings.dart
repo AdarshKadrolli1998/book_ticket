@@ -42,21 +42,21 @@ String validateEmail(String value){
   }
 }
 
-  String validatePassword(String value){
-    Pattern pattern = MyStrings.passwordPattern;
-    RegExp regex = new RegExp(pattern);
-    try{
-      if (value.isEmpty) {
-        return 'Please enter your password';
-      }
-      if (!regex.hasMatch(value)) {
-        return 'Please enter a valid password';
-      }
-      return null;
+String validatePassword(String value){
+  Pattern pattern = MyStrings.passwordPattern;
+  RegExp regex = new RegExp(pattern);
+  try{
+    if (value.isEmpty) {
+      return 'Please enter your password';
     }
-    catch(exception){
-      print(e);
+    if (!regex.hasMatch(value)) {
+      return 'Please enter a valid password';
     }
+    return null;
+  }
+  catch(exception){
+    print(e);
+  }
 }
 
 /// List defines the images used in startscreen to make carousel slider

@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:book_ticket/common/myColors.dart';
 import 'package:book_ticket/common/myStrings.dart';
 import 'package:book_ticket/components/myButtons/myFlatButton.dart';
@@ -7,6 +5,9 @@ import 'package:book_ticket/components/myButtons/myRaisedButton.dart';
 import 'package:book_ticket/components/sizedBox.dart';
 import 'package:book_ticket/components/textFields/emailFeild.dart';
 import 'package:book_ticket/components/textFields/passwordField.dart';
+import 'package:book_ticket/screens/homeScreen/home.dart';
+import 'package:book_ticket/screens/sign_up/signUpScreen.dart';
+import 'package:book_ticket/services/loginAuthentication.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatefulWidget {
@@ -15,10 +16,10 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignIn> {
-  final _formKey = GlobalKey<FormState>();
+  // final _formKey = GlobalKey<FormState>();
   // String _email = '';
   // String _password = '';
-  String _name = '';
+  // String _name = '';
 
   // void _trySubmitForm() {
   //   final isValid = _formKey.currentState.validate();
@@ -85,9 +86,11 @@ class _SignUpState extends State<SignIn> {
                     ),
                     SizeBetween(),
                     SizeBetween(),
+                    SizeBetween(),
                     Container(
-                      padding: const EdgeInsets.only(left: 15),
+                      // padding: const EdgeInsets.only(left: 15),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(MyStrings.signInWith,
                           style: TextStyle(
@@ -107,9 +110,18 @@ class _SignUpState extends State<SignIn> {
                             padding: const EdgeInsets.only(left: 25),
                             child: FloatingActionButton(
                               heroTag: "google button",
-                                onPressed: (){},
+                                onPressed: (){
+                                  signInWithGoogle().whenComplete(() {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(builder: (context) {
+                                        return HomeScreen();
+                                      }
+                                      ),);
+                                  });
+
+                                },
                                 child: Image.network(MyStrings.googleImage),
-                              backgroundColor: Colors.white,
+                              backgroundColor: MyColors.floatingButtonColor,
                             ),
                           )
                         ],
@@ -117,6 +129,8 @@ class _SignUpState extends State<SignIn> {
                     ),
                     SizeBetween(),
                     SizeBetween(),
+                    SizeBetween(),
+
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -128,7 +142,12 @@ class _SignUpState extends State<SignIn> {
                           ),
                         ),
                         MyFlatButton(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => SignUp(),),
+                            );
+                          },
                           title: MyStrings.signup,
                           clrs: MyColors.textSignUpColor,
                           btmPadding: 0.0,

@@ -1,4 +1,4 @@
-import 'file:///C:/Users/user1/AndroidStudioProjects/book_ticket/lib/screens/splashScreen/splash_screen.dart';
+import 'package:book_ticket/screens/splashScreen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

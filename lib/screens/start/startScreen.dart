@@ -1,6 +1,6 @@
-import 'file:///C:/Users/user1/AndroidStudioProjects/book_ticket/lib/components/sizedBox.dart';
 import 'package:book_ticket/common/myStrings.dart';
-import 'file:///C:/Users/user1/AndroidStudioProjects/book_ticket/lib/components/myButtons/myRaisedButton.dart';
+import 'package:book_ticket/components/myButtons/myRaisedButton.dart';
+import 'package:book_ticket/components/sizedBox.dart';
 import 'package:book_ticket/screens/sign_up/signUpScreen.dart';
 import 'package:book_ticket/screens/start/carouselSliderDots.dart';
 import 'package:flutter/material.dart';

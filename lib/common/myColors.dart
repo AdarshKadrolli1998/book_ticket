@@ -18,4 +18,6 @@ class MyColors{
   static const dontHaveAccountColor = Color.fromRGBO(186, 186, 186, 1);
   static const textSignUpColor = Color.fromRGBO(255, 121, 168, 1);
   static const forgotPasswordColor = Color.fromRGBO(186, 186, 186, 1);
+  static const floatingButtonColor = Color.fromRGBO(255, 255, 255, 0.9);
+  static const themeColor = Color.fromRGBO(255, 121, 168, 1);
 }
