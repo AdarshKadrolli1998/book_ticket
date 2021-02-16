@@ -1,17 +1,34 @@
 import 'package:book_ticket/common/myStrings.dart';
 import 'package:book_ticket/components/myButtons/myRaisedButton.dart';
 import 'package:book_ticket/components/sizedBox.dart';
+import 'package:book_ticket/screens/homeScreen/homeScreen.dart';
 import 'package:book_ticket/screens/sign_up/signUpScreen.dart';
 import 'package:book_ticket/screens/start/carouselSliderDots.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-
+final FirebaseAuth _auth = FirebaseAuth.instance;
+// final FirebaseUser _user = FirebaseUser.instance;
 class StartScreen extends StatefulWidget {
   @override
   StartScreenState createState() => StartScreenState();
 }
 
 class StartScreenState extends State<StartScreen> {
+  var FirebaseApp;
+  var FirebaseDatabase;
+  void signInAuth() {
+    // if (!FirebaseApp.getApps(this).isEmpty())
+    //   FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+    print("Calling from firebase "+_auth.currentUser().toString());
+    if (FirebaseAuth.instance.currentUser() != null) {
+      Navigator.of(context)
+          .pushReplacement(MaterialPageRoute(builder: (context) => HomeScreen()));
+      print("Logged In");
+    } else {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp()));
+    }
+  }
   CarouselSlider carouselSlider;
   int cnt = 0;
 
@@ -78,10 +95,7 @@ class StartScreenState extends State<StartScreen> {
               SizeBetween(),
               MyRaisedButton(
                 onPressed: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => SignUp(),),
-                  );
+                  signInAuth();
                 },
                 title: MyStrings.startBookingButton,
               ),

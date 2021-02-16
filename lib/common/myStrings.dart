@@ -17,6 +17,7 @@ class MyStrings {
   static const String forgotPasswrd = "Forgot Password?";
   static const String signIn = "SIGN IN";
   static const String signInWith = "Sign In with";
+  static const String viewAll = "View All";
   static const String fbImage = 'https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512';
   static const String googleImage = "https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png";
 

@@ -23,8 +23,12 @@ Future<String> signInWithGoogle() async {
   // Firabase User class in  this class Googe Sign in
   final FirebaseUser user = authResult.user;
 
-  assert(!user.isAnonymous);
-  assert(await user.getIdToken() != null);
+  try {
+    assert(!user.isAnonymous);
+    assert(await user.getIdToken() != null);
+  }catch(exception){
+    print(exception);
+  }
 
   final FirebaseUser currentUser = await _auth.currentUser();
   assert(user.uid == currentUser.uid);

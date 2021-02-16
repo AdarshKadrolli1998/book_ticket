@@ -5,7 +5,7 @@ import 'package:book_ticket/components/myButtons/myRaisedButton.dart';
 import 'package:book_ticket/components/sizedBox.dart';
 import 'package:book_ticket/components/textFields/emailFeild.dart';
 import 'package:book_ticket/components/textFields/passwordField.dart';
-import 'package:book_ticket/screens/homeScreen/home.dart';
+import 'package:book_ticket/screens/homeScreen/homeScreen.dart';
 import 'package:book_ticket/screens/sign_up/signUpScreen.dart';
 import 'package:book_ticket/services/loginAuthentication.dart';
 import 'package:flutter/material.dart';
@@ -81,6 +81,12 @@ class _SignUpState extends State<SignIn> {
 
                     MyRaisedButton(
                       onPressed: (){
+                        Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) {
+                            return HomeScreen();
+                          }
+                          ),
+                        );
                       },
                       title: MyStrings.signIn,
                     ),
@@ -116,7 +122,8 @@ class _SignUpState extends State<SignIn> {
                                       MaterialPageRoute(builder: (context) {
                                         return HomeScreen();
                                       }
-                                      ),);
+                                      ),
+                                    );
                                   });
 
                                 },

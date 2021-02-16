@@ -18,6 +18,13 @@ class MyColors{
   static const dontHaveAccountColor = Color.fromRGBO(186, 186, 186, 1);
   static const textSignUpColor = Color.fromRGBO(255, 121, 168, 1);
   static const forgotPasswordColor = Color.fromRGBO(186, 186, 186, 1);
-  static const floatingButtonColor = Color.fromRGBO(255, 255, 255, 0.9);
+  static const floatingButtonColor = Color.fromRGBO(255, 255, 255, 1);
   static const themeColor = Color.fromRGBO(255, 121, 168, 1);
+  static const flightColor = Color.fromRGBO(245, 88, 109, 1);
+  static const hotelColor = Color.fromRGBO(87, 207, 37, 1);
+  static const carColor = Color.fromRGBO(111, 78, 232, 1);
+  static const restaurantColor = Color.fromRGBO(225, 80, 227, 1);
+  static const guideColor = Color.fromRGBO(80, 227, 212, 1);
+  static const viewAllColor = Color.fromRGBO(255, 121, 168, 1);
+  static const iconsColor = Color.fromRGBO(255, 255, 255, 1);
 }
