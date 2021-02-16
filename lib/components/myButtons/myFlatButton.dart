@@ -13,7 +13,7 @@ class MyFlatButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlatButton(
         child: Container(
-          padding: EdgeInsets.only(bottom: btmPadding),
+          padding: EdgeInsets.only(bottom: btmPadding, top: 0, left: 0,right: 0),
             child: Text(title,
               style: TextStyle(
                 color: clrs,
