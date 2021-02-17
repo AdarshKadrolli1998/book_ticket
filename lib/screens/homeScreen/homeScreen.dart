@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: ListView(
             children: [
               Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.only(left: 16, top: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -50,32 +50,35 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           TopMenuTiles(
                               name: "Flight",
-                              iconUrl: Icons.airplanemode_active,
+                              icon: Icons.airplanemode_active,
                               clr: MyColors.flightColor),
                           TopMenuTiles(
                               name: "Hotel",
-                              iconUrl: Icons.hotel,
+                              icon: Icons.hotel,
                               clr: MyColors.hotelColor),
                           TopMenuTiles(
                               name: "Car",
-                              iconUrl: Icons.directions_car_outlined,
+                              icon: Icons.directions_car_outlined,
                               clr: MyColors.carColor),
                           TopMenuTiles(
                               name: "Restaurant",
-                              iconUrl: Icons.restaurant,
+                              icon: Icons.restaurant,
                               clr: MyColors.restaurantColor),
                           TopMenuTiles(
                               name: "Guide",
-                              iconUrl: Icons.directions_run_rounded,
+                              icon: Icons.directions_run_rounded,
                               clr: MyColors.guideColor),
                         ],
                       ),
                     ),
-                    Text("Best Offers",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        )),
+                    Container(
+                      padding: EdgeInsets.only(top: 15),
+                      child: Text("Best Offers",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          )),
+                    ),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                       child: Row(
@@ -83,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           children: [
                             Text("Recommended Destinations",
                                 style: TextStyle(
-                                    fontSize: 15,
+                                    fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.grey)),
                             MyFlatButton(
@@ -91,6 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 title: "View All",
                                 clrs: Colors.pink,
                               btmPadding: 0.0,
+                              fontSize: 14.0,
                             ),
                           ]),
                     ),
@@ -112,24 +116,29 @@ class _HomeScreenState extends State<HomeScreen> {
                                             fit: BoxFit.fill,
                                             image: NetworkImage(
                                                 "https://images.unsplash.com/photo-1431274172761-fca41d930114?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"))),
-                                    // child: Text("from 8999rs"),
-                                  ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(12, 12, 0, 0),
-                                    child: Text(
-                                      'Paris',
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w600),
+                                    child: Container(
+                                      padding: EdgeInsets.only(left: 25, top: 115),
+                                        child: Text("from \$490 USD",
+                                        style: TextStyle(color: Colors.white,fontWeight:
+                                        FontWeight.bold,fontSize: 18),)
                                     ),
                                   ),
                                   Padding(
                                     padding:
-                                        const EdgeInsets.fromLTRB(12, 8, 0, 0),
-                                    child: Text('France',
+                                        const EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                    child: Text(
+                                      'Thailand',
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                                    child: Text('Bangkok',
                                         style: TextStyle(
-                                            color: Colors.grey, fontSize: 17)),
+                                            color: Colors.grey, fontSize: 16)),
                                   ),
                                 ],
                               ),
@@ -150,22 +159,28 @@ class _HomeScreenState extends State<HomeScreen> {
                                           fit: BoxFit.fill,
                                           image: NetworkImage(
                                               "https://images.unsplash.com/photo-1531169628939-e84f860fa5d6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"))),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(12, 12, 0, 0),
-                                  child: Text(
-                                    'Bangkok',
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w600),
+                                  child: Container(
+                                      padding: EdgeInsets.only(left: 25, top: 115),
+                                      child: Text("from \$490 USD",
+                                        style: TextStyle(color: Colors.white,fontWeight:
+                                        FontWeight.bold,fontSize: 18),)
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.fromLTRB(12, 8, 0, 0),
-                                  child: Text('Thailand',
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                  child: Text(
+                                    'Paris',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                                  child: Text('France',
                                       style: TextStyle(
-                                          color: Colors.grey, fontSize: 17)),
+                                          color: Colors.grey, fontSize: 16)),
                                 ),
                               ],
                             ),
@@ -185,22 +200,28 @@ class _HomeScreenState extends State<HomeScreen> {
                                           fit: BoxFit.fill,
                                           image: NetworkImage(
                                               "https://uceap.universityofcalifornia.edu/sites/default/files/marketing-images/program-page-images/made-in-italy-glance.jpg"))),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(12, 12, 0, 0),
-                                  child: Text(
-                                    'california',
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w600),
+                                  child: Container(
+                                      padding: EdgeInsets.only(left: 25, top: 115),
+                                      child: Text("from \$490 USD",
+                                        style: TextStyle(color: Colors.white,fontWeight:
+                                        FontWeight.bold,fontSize: 18),)
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.fromLTRB(12, 8, 0, 0),
-                                  child: Text('university',
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                  child: Text(
+                                    'California',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                                  child: Text('University',
                                       style: TextStyle(
-                                          color: Colors.grey, fontSize: 17)),
+                                          color: Colors.grey, fontSize: 16)),
                                 ),
                               ],
                             ),
@@ -220,22 +241,28 @@ class _HomeScreenState extends State<HomeScreen> {
                                           fit: BoxFit.fill,
                                           image: NetworkImage(
                                               "https://www.travelanddestinations.com/wp-content/uploads/2019/05/Thailand-Beaches-and-Scenery.jpg"))),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(12, 12, 0, 0),
-                                  child: Text(
-                                    'srilanka',
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w600),
+                                  child: Container(
+                                      padding: EdgeInsets.only(left: 25, top: 115),
+                                      child: Text("from \$490 USD",
+                                        style: TextStyle(color: Colors.white,fontWeight:
+                                        FontWeight.bold,fontSize: 18),)
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.fromLTRB(12, 8, 0, 0),
-                                  child: Text('colombo',
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 12, 0, 0),
+                                  child: Text(
+                                    'Srilanka',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                                  child: Text('Colombo',
                                       style: TextStyle(
-                                          color: Colors.grey, fontSize: 17)),
+                                          color: Colors.grey, fontSize: 16)),
                                 ),
                               ],
                             ),
@@ -244,7 +271,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     // SizedBox(width: 10,),
 
                     Container(
-                      padding: EdgeInsets.all(0),
+                      padding: EdgeInsets.only(top: 10,bottom: 5),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -258,6 +285,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             title: "View All",
                             clrs: Colors.pink,
                             btmPadding: 0.0,
+                            fontSize: 14.0,
                           ),
                         ],
                       ),
@@ -313,7 +341,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
-        // bottomNavigationBar: BottomNavBarWidget(),
+        bottomNavigationBar: BottomNavBarWidget(),
       ),
     );
   }

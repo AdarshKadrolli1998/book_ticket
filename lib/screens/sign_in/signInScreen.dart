@@ -74,6 +74,7 @@ class _SignUpState extends State<SignIn> {
                             title: MyStrings.forgotPasswrd,
                             clrs: MyColors.forgotPasswordColor,
                           btmPadding: 0.0,
+                          fontSize: 16,
                         )
                       ],
                     ),
@@ -158,6 +159,7 @@ class _SignUpState extends State<SignIn> {
                           title: MyStrings.signup,
                           clrs: MyColors.textSignUpColor,
                           btmPadding: 0.0,
+                          fontSize: 16,
                         )
                       ],
                     ),

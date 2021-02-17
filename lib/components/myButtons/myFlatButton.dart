@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 
 /// MyFlatButton class defines the raised button which can be reused
 class MyFlatButton extends StatelessWidget {
-  MyFlatButton({@required this.onPressed, @required this.title, @required this.clrs, this.btmPadding});
+  MyFlatButton({@required this.onPressed, @required this.title, @required this.clrs, this.btmPadding, this.fontSize});
 
   final GestureTapCallback onPressed;
   final String title;
   var clrs;
   var btmPadding;
+  var fontSize;
   @override
   Widget build(BuildContext context) {
     return FlatButton(
@@ -18,7 +19,7 @@ class MyFlatButton extends StatelessWidget {
               style: TextStyle(
                 color: clrs,
                 fontWeight: FontWeight.bold,
-                fontSize: 16
+                fontSize: fontSize
               ),
         ),
         ),

@@ -27,4 +27,6 @@ class MyColors{
   static const guideColor = Color.fromRGBO(80, 227, 212, 1);
   static const viewAllColor = Color.fromRGBO(255, 121, 168, 1);
   static const iconsColor = Color.fromRGBO(255, 255, 255, 1);
+  static const bottomNavIconColor = Color.fromRGBO(255, 121, 168, 1);
+  static const bottomNavTextColor = Colors.black;
 }

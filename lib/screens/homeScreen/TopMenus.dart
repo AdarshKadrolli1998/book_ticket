@@ -3,14 +3,11 @@ import 'package:flutter/material.dart';
 
 class TopMenuTiles extends StatelessWidget {
   String name;
-  var iconUrl;
+  var icon;
   var clr;
 
   TopMenuTiles(
-      {Key key,
-      @required this.name,
-      @required this.iconUrl,
-      @required this.clr});
+      {Key key, @required this.name, @required this.icon, @required this.clr});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +16,7 @@ class TopMenuTiles extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.only(left: 0, right: 5, top: 5, bottom: 5),
+            padding: EdgeInsets.only(left: 0, right: 20, top: 5, bottom: 5),
             decoration: new BoxDecoration(boxShadow: [
               new BoxShadow(
                 color: Colors.white,
@@ -29,7 +26,7 @@ class TopMenuTiles extends StatelessWidget {
             ]),
             child: Card(
                 color: clr,
-                elevation: 4,
+                elevation: 10,
                 shape: RoundedRectangleBorder(
                   borderRadius: const BorderRadius.all(
                     Radius.circular(50.0),
@@ -38,12 +35,20 @@ class TopMenuTiles extends StatelessWidget {
                 child: Container(
                   width: 65,
                   height: 65,
-                  child: Center(child: Icon(iconUrl,color: MyColors.iconsColor,)),
-                )
-            ),
+                  child: Center(
+                      child: Icon(
+                    icon,
+                    color: MyColors.iconsColor,
+                  )),
+                )),
           ),
-          Text(name,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+          Container(
+            padding: EdgeInsets.only(right: 20),
+            child: Text(name,
+                style: TextStyle(
+                  fontSize: 14,
+                )),
+          ),
         ],
       ),
     );

@@ -131,6 +131,7 @@ class _SignUpState extends State<SignUp> {
                             title: MyStrings.signin,
                             clrs: MyColors.textSignInColor,
                           btmPadding: 0.0,
+                          fontSize: 16,
                         )
                       ],
                     ),
@@ -142,6 +143,7 @@ class _SignUpState extends State<SignUp> {
                             title: MyStrings.skipNow,
                             clrs: MyColors.skipNowColor,
                           btmPadding: 30.0,
+                          fontSize: 16,
                           ),
                       ],
                     )

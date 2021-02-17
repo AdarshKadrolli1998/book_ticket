@@ -1,3 +1,4 @@
+import 'package:book_ticket/common/myColors.dart';
 import 'package:flutter/material.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -21,36 +22,36 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
       type: BottomNavigationBarType.fixed,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Icon(Icons.home_outlined),
           title: Text(
             'Home',
-            style: TextStyle(color: Color(0xFF2c2b2b)),
+            style: TextStyle(color: MyColors.bottomNavTextColor),
           ),
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.assistant_direction),
+          icon: Icon(Icons.directions),
           title: Text(
             'Near By',
-            style: TextStyle(color: Color(0xFF2c2b2b)),
+            style: TextStyle(color: MyColors.bottomNavTextColor),
           ),
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.card_giftcard),
+          icon: Icon(Icons.shopping_cart_outlined),
           title: Text(
             'Cart',
-            style: TextStyle(color: Color(0xFF2c2b2b)),
+            style: TextStyle(color: MyColors.bottomNavTextColor),
           ),
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.account_circle_rounded),
+          icon: Icon(Icons.account_circle_outlined),
           title: Text(
             'Account',
-            style: TextStyle(color: Color(0xFF2c2b2b)),
+            style: TextStyle(color: MyColors.bottomNavTextColor),
           ),
         ),
       ],
       currentIndex: _selectedIndex,
-      selectedItemColor: Color(0xFFfd5352),
+      selectedItemColor: MyColors.bottomNavIconColor,
       onTap: _onItemTapped,
     );
   }
